@@ -77,10 +77,10 @@ BlockingQueue не признает нулевых элементов (null) и 
 - четвертые блокируют поток на определенное время.
 Эти методы представлены в следующем виде:
 
-Вызывает | Exception  | Чтение значения | Блокировка	| Чтение с задержкой
+Вызывает | Exception  | Чтение значения | Блокировка	  | Чтение с задержкой
 ------------------------------------------------------------------------------
-Insert	 | add(e)	  | offer(e)	    | put(e)	    | offer(e, time, unit)
-Remove	 | remove()	  | poll()	        | take()	    | poll(time, unit)
+Insert	 | add(e)	    | offer(e)	      | put(e)	      | offer(e, time, unit)
+Remove	 | remove()	  | poll()	        | take()	      | poll(time, unit)
 Проверка | element()  |	peek()	        | не применимый	| не применимый
 
 (см.пример Less_25_BlockingQueue_Step3)
@@ -103,17 +103,17 @@ Remove	 | remove()	  | poll()	        | take()	    | poll(time, unit)
 
 Первый Элемент (голова):
 ---------------------------------------------------------------------------------------
-Вызывает | Exception	 | Чтение значения | Блокировка    | Чтение с задержкой
+Вызывает | Exception	   | Чтение значения | Блокировка    | Чтение с задержкой
 ---------------------------------------------------------------------------------------
 Insert	 | addFirst(e)	 | offerFirst(e)   | putFirst(e)   | offerFirst(e, time, unit)
 Remove	 | removeFirst() | pollFirst()	   | takeFirst()   | pollFirst(time, unit)
-Проверка | getFirst()	 | peekFirst()	   | не применимый | не применимый
+Проверка | getFirst()	   | peekFirst()	   | не применимый | не применимый
 ---------------------------------------------------------------------------------------
 Последний Элемент (хвост)
 ---------------------------------------------------------------------------------------
-Insert	 | addLast(e)	 | offerLast(e)	   | putLast(e)	   | offerLast(e, time, unit)
-Remove	 | removeLast()	 | pollLast()	   | takeLast()	   | pollLast(time, unit)
-Проверка | addLast	     | peekLast()	   | не применимый | не применимый
+Insert	 | addLast(e)	   | offerLast(e)	   | putLast(e)	   | offerLast(e, time, unit)
+Remove	 | removeLast()	 | pollLast()	     | takeLast()	   | pollLast(time, unit)
+Проверка | addLast	     | peekLast()	     | не применимый | не применимый
 ---------------------------------------------------------------------------------------
 
 Реализация BlockingDeque может использоваться непосредственно в качестве BlockingQueue
@@ -125,7 +125,7 @@ BlockingQueue method | Equivalent BlockingDeque method
 Insert
 ------------------------------------------------------------
 add(e)	             | addLast(e)
-offer(e)	         | offerLast(e)
+offer(e)	           | offerLast(e)
 put(e)	             | putLast(e)
 offer(e, time, unit) | offerLast(e, time, unit)
 ------------------------------------------------------------
