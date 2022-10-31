@@ -103,17 +103,17 @@ Remove	 | remove()  | poll()          | take()        | poll(time, unit)
 
 Первый Элемент (голова):
 ---------------------------------------------------------------------------------------
-Вызывает | Exception	   | Чтение значения | Блокировка    | Чтение с задержкой
+Вызывает | Exception     | Чтение значения | Блокировка    | Чтение с задержкой
 ---------------------------------------------------------------------------------------
-Insert	 | addFirst(e)	 | offerFirst(e)   | putFirst(e)   | offerFirst(e, time, unit)
-Remove	 | removeFirst() | pollFirst()	   | takeFirst()   | pollFirst(time, unit)
-Проверка | getFirst()	   | peekFirst()	   | не применимый | не применимый
+Insert	 | addFirst(e)   | offerFirst(e)   | putFirst(e)   | offerFirst(e, time, unit)
+Remove	 | removeFirst() | pollFirst()     | takeFirst()   | pollFirst(time, unit)
+Проверка | getFirst()    | peekFirst()     | не применимый | не применимый
 ---------------------------------------------------------------------------------------
 Последний Элемент (хвост)
 ---------------------------------------------------------------------------------------
-Insert	 | addLast(e)	   | offerLast(e)	   | putLast(e)	   | offerLast(e, time, unit)
-Remove	 | removeLast()	 | pollLast()	     | takeLast()	   | pollLast(time, unit)
-Проверка | addLast	     | peekLast()	     | не применимый | не применимый
+Insert	 | addLast(e)    | offerLast(e)    | putLast(e)    | offerLast(e, time, unit)
+Remove	 | removeLast()  | pollLast()      | takeLast()    | pollLast(time, unit)
+Проверка | addLast       | peekLast()      | не применимый | не применимый
 ---------------------------------------------------------------------------------------
 
 Реализация BlockingDeque может использоваться непосредственно в качестве BlockingQueue
