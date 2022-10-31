@@ -77,11 +77,11 @@ BlockingQueue не признает нулевых элементов (null) и 
 - четвертые блокируют поток на определенное время.
 Эти методы представлены в следующем виде:
 
-Вызывает | Exception  | Чтение значения | Блокировка	  | Чтение с задержкой
+Вызывает | Exception | Чтение значения | Блокировка	  | Чтение с задержкой
 ------------------------------------------------------------------------------
-Insert	 | add(e)	    | offer(e)	      | put(e)	      | offer(e, time, unit)
-Remove	 | remove()	  | poll()	        | take()	      | poll(time, unit)
-Проверка | element()  |	peek()	        | не применимый	| не применимый
+Insert	 | add(e)    | offer(e)	      | put(e)	      | offer(e, time, unit)
+Remove	 | remove()  | poll()	        | take()	      | poll(time, unit)
+Проверка | element() |	peek()	        | не применимый	| не применимый
 
 (см.пример Less_25_BlockingQueue_Step3)
 
