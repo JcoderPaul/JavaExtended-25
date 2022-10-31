@@ -125,7 +125,7 @@ BlockingQueue method | Equivalent BlockingDeque method
 Insert
 ------------------------------------------------------------
 add(e)	             | addLast(e)
-offer(e)	           | offerLast(e)
+offer(e)             | offerLast(e)
 put(e)	             | putLast(e)
 offer(e, time, unit) | offerLast(e, time, unit)
 ------------------------------------------------------------
