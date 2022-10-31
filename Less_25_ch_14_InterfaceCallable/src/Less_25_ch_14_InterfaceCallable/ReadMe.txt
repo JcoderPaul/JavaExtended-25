@@ -1,0 +1,148 @@
+*** Интерфейсы Callable и Future в Java ***
+
+Очень часто при работе с потоками нам нужно получать какой-то результат и было бы
+очень удобно, чтобы поток сам возвращал результаты своей работы. Именно поэтому еще
+в Java 5 появились интерфейсы Callable<V> и Future<V>. Интерфейсы Callable<V> очень
+похож на интерфейс Runnable, но может вернуть результат в виде объекта Object и
+способен бросать исключения. Совместное использование двух реализаций данных интерфейсов
+позволяет получить результат в виде некоторого объекта.
+
+*** Интерфейс Callable<V> ***
+
+Интерфейс Callable<V> очень похож на интерфейс Runnable. Объекты, реализующие данные интерфейсы,
+исполняются другим потоком. Однако, в отличие от Runnable, интерфейс Callable использует Generic-и
+для определения типа возвращаемого объекта. Runnable содержит метод run(), описывающий действие
+потока во время выполнения, а Callable – метод call().
+--------------------------------------------------------------------------------------------------
+public interface Callable {
+    <V> call() throws Exception;
+}
+--------------------------------------------------------------------------------------------------
+
+*** Интерфейс Future<V> ***
+
+Интерфейс Future также, как и интерфейс Callable, использует Generic-и. Методы интерфейса можно
+использовать для проверки завершения работы потока, ожидания завершения и получения результата.
+Результат выполнения может быть получен методом *.get(), если поток завершил работу. Прервать выполнения
+задачи можно методом *.cancel(). Дополнительные методы позволяют определить завершение задачи :
+нормальное или прерванное. Если задача завершена, то прервать ее уже невозможно.
+
+Методы интерфейса Future:
+- cancel (boolean mayInterruptIfRunning) - попытка завершения задачи, если она еще не начата;
+- <V> get() - ожидание (при необходимости) завершения задачи, после чего можно будет получить результат;
+- <V> get(long timeout, TimeUnit unit) - ожидание (при необходимости) завершения задачи в течение
+                                         определенного времени, после чего можно будет получить результат;
+- isCancelled() - вернет true, если выполнение задачи будет прервано прежде завершения;
+- isDone() - вернет true, если задача завершена;
+
+*** !!! ВСПОМНИМ !!! ***
+
+Есть несколько разных способов делегировать задачи ExecutorService.
+
+- execute(Runnable) - метод ExecutorService execute(Runnable) принимает ТОЛЬКО объект java.lang.Runnable и
+                      выполняет его асинхронно.
+--------------------------------------------------------------------------------------------------
+ExecutorService executorService = Executors.newSingleThreadExecutor();
+executorService.execute(new Runnable(){
+    public void run(){
+        System.out.println("asynchronous task");
+    }
+});
+executorService.shutdown();
+--------------------------------------------------------------------------------------------------
+
+- submit(Callable или Runnable) - метод принимает реализацию Callable (Runnable) и возвращает будущий объект
+                                  или объект интерфейса Future. Будущий объект можно использовать для проверки
+                                  завершения выполнения Callable.
+--------------------------------------------------------------------------------------------------
+Future future = executorService.submit(new Callable(){
+    public Object call() throws Exception{
+    System.out.println("Asynchronous callable"); // На экране - Asynchroous callable
+    return "Callable Result";
+    }
+});
+System.out.println("future.get() = " future.get()); // future.get = Callable Result
+--------------------------------------------------------------------------------------------------
+
+- invokeAny() - метод принимает коллекцию вызываемых объектов. Вызов этого метода не возвращает
+                Future Obj, но возвращает результат одного случайного из вызываемых объектов.
+--------------------------------------------------------------------------------------------------
+ExecutorService executorService = Executors.newSingleThreadExecutor();
+Set<Callable<String>> callables = new HashSet<Callable<String>>();
+
+    callables.add(new Callable<String>(){
+        public String call() throws Exception{
+        return"task A";
+        }
+    });
+
+    callables.add(new Callable<String>(){
+        public String call() throws Exception{
+        return"task B";
+        }
+    });
+
+    callables.add(new Callable<String>(){
+        public String call() throws Exception{
+        return"task C";
+        }
+    });
+
+String result = executorService.invokeAny(callables);
+System.out.println("result = " + result);
+executorService.shutdown();
+--------------------------------------------------------------------------------------------------
+
+- invokeAll() - метод возвращает все вызываемые объекты, переданные в качестве параметров. Он возвращает
+                Future объекты, которые можно использовать для получения результатов выполнения каждого
+                вызываемого объекта.
+--------------------------------------------------------------------------------------------------
+ExecutorService executorService = Executors.newSingleThreadExecutor();
+Set<Callable<String>> callables = new HashSet<Callable<String>>();
+
+    callables.add(new Callable<String>(){
+        public String call() throws Exception{
+        return "Task A";
+        }
+    });
+
+    callables.add(new Callable<String>(){
+        public String call() throws Exception{
+        return "Task B";
+        }
+    });
+
+    callables.add(new Callable<String>(){
+        public String call() throws Exception{
+        return "Task C";
+        }
+    });
+
+List<Future<String>> futures = executorService.invokeAll(callables);
+
+    for(Future<String> future: futures){
+        System.out.println(" future.get = " + future.get());
+    }
+
+executorService.shutdown();
+--------------------------------------------------------------------------------------------------
+
+*** !!! ПОВТОРИМ !!! ***
+Запускаемый и вызываемый интерфейсы (Runnable и Callable) очень похожи друг на друга. Разница видна
+в объявлении интерфейсов. Оба интерфейса представляют собой задачу, которая может выполняться одновременно
+потоком или ExecutorService.
+Вызываемое объявление:
+--------------------------------------------------------------------------------------------------
+public interface Callable{
+    public object call() throws Exception;
+}
+--------------------------------------------------------------------------------------------------
+Выполняемое объявление:
+--------------------------------------------------------------------------------------------------
+public interface Runnable{
+    public void run();
+}
+--------------------------------------------------------------------------------------------------
+
+Основное различие между ними заключается в том, что метод call() может возвращать объект из вызова метода.
+И метод call() может вызвать исключение, а метод run() – нет.
