@@ -82,7 +82,7 @@ BlockingQueue не признает нулевых элементов (null) и 
 Insert	 | add(e)    | offer(e)        | put(e)        | offer(e, time, unit)
 Remove	 | remove()  | poll()          | take()        | poll(time, unit)
 Проверка | element() |	peek()         | не применимый | не применимый
-
+------------------------------------------------------------------------------
 (см.пример Less_25_BlockingQueue_Step3)
 
 ************ Интерфейс BlockingDeque ************
