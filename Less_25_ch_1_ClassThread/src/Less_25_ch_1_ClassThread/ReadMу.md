@@ -24,13 +24,12 @@ Thread, либо реализуя в классе интерфейс Runnable.
 
 С помощью статического метода Thread.currentThread() мы можем получить текущий
 поток выполнения:
--------------------------------------------------------------------------------
-public static void main(String[] args) {
-         
-    Thread t = Thread.currentThread(); // Получить текущий поток
-    System.out.println(t.getName()); // main
-}
--------------------------------------------------------------------------------
+
+         public static void main(String[] args) {
+                  Thread t = Thread.currentThread(); // Получить текущий поток
+                  System.out.println(t.getName()); // main
+         }
+
 По умолчанию именем главного потока будет main.
 
 Для управления потоком класс Thread предоставляет ряд методов.
