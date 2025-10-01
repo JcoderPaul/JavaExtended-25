@@ -29,7 +29,7 @@
    - [HW_3_Step3](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/Less_25_HW_3_Step3.java) - Повторная оптимизация с применением интерфейса [Supplier](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/InterfaceSupplier.txt).
 
 Русифицированная документация по применяемым классам и методам JAVA:
-- [ThreadLocal](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/ThreadLocal.txt)
+- [ThreadLocal](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/ThreadLocal.md)
 - [InterfaceSupplier](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/InterfaceSupplier.txt)
 - [InterfaceIntStream](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/InterfaceIntStream.txt)
 - [FutureCallable](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/FutureCallable.txt)
