@@ -1,6 +1,6 @@
 ### Class ThreadLocal - Класс ThreadLocal
 
- public class ThreadLocal<T> extends Object
+  public class ThreadLocal<T> extends Object
 
 Данный класс предоставляет локальные переменные потока. Эти переменные
 отличаются от своих обычных аналогов тем, что каждый поток, обращающийся
@@ -94,6 +94,5 @@ import java.util.concurrent.atomic.AtomicInteger;
   текущим потоком в промежутке времени. Это может привести к многократному
   вызову метода initialValue в текущем потоке.
 
----------------------------------------------------------------------------------
+---
 См. https://docs.oracle.com/javase/7/docs/api/java/lang/ThreadLocal.html
----------------------------------------------------------------------------------
