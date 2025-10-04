@@ -1,4 +1,5 @@
 Race condition и data race — две разные проблемы многопоточности, которые часто путают.
+
 ---
 
 ### Race condition
