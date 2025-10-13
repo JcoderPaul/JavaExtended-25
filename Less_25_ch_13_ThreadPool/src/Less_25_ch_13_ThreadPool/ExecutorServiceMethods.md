@@ -1,4 +1,4 @@
-*** Методы интерфейса ExecutorService ***
+### Методы интерфейса ExecutorService
 
 - boolean awaitTermination(long timeout, TimeUnit unit)	- Блокирует (заставляет ждать) поток в котором он был
   вызван до тех пор, пока все задачи ExecutorService не завершат свое выполнение после запроса на завершение
