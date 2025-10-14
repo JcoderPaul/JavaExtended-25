@@ -41,8 +41,7 @@
 
 Есть несколько разных способов делегировать задачи ExecutorService.
 
-        - execute(Runnable) - метод ExecutorService execute(Runnable) принимает ТОЛЬКО объект java.lang.Runnable и
-                              выполняет его асинхронно.
+- execute(Runnable) - метод ExecutorService execute(Runnable) принимает ТОЛЬКО объект java.lang.Runnable и выполняет его асинхронно.
   
 ---
         ExecutorService executorService = Executors.newSingleThreadExecutor();
@@ -54,9 +53,7 @@
         executorService.shutdown();
 ---
 
-        - submit(Callable или Runnable) - метод принимает реализацию Callable (Runnable) и возвращает будущий объект
-                                          или объект интерфейса Future. Будущий объект можно использовать для проверки
-                                          завершения выполнения Callable.
+- submit(Callable или Runnable) - метод принимает реализацию Callable (Runnable) и возвращает будущий объект или объект интерфейса Future. Будущий объект можно использовать для проверки завершения выполнения Callable.
                                           
 ---
         Future future = executorService.submit(new Callable(){
@@ -68,8 +65,7 @@
         System.out.println("future.get() = " future.get()); // future.get = Callable Result
 ---
 
-        - invokeAny() - метод принимает коллекцию вызываемых объектов. Вызов этого метода не возвращает
-                        Future Obj, но возвращает результат одного случайного из вызываемых объектов.
+- invokeAny() - метод принимает коллекцию вызываемых объектов. Вызов этого метода не возвращает Future Obj, но возвращает результат одного случайного из вызываемых объектов.
                         
 ---
         ExecutorService executorService = Executors.newSingleThreadExecutor();
@@ -98,9 +94,7 @@
         executorService.shutdown();
 ---
 
-        - invokeAll() - метод возвращает все вызываемые объекты, переданные в качестве параметров. Он возвращает
-                        Future объекты, которые можно использовать для получения результатов выполнения каждого
-                        вызываемого объекта.
+- invokeAll() - метод возвращает все вызываемые объекты, переданные в качестве параметров. Он возвращает Future объекты, которые можно использовать для получения результатов выполнения каждого вызываемого объекта.
                         
 ---
         ExecutorService executorService = Executors.newSingleThreadExecutor();
