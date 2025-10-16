@@ -129,21 +129,21 @@ BlockingQueue, точно эквивалентны методам BlockingDeque 
 
 |BlockingQueue method | Equivalent BlockingDeque method
 |---------------------|---------------------------------------
-|Insert               |
+|Insert               
 |---------------------|---------------------------------------
 |add(e)	              | addLast(e)
 |offer(e)             | offerLast(e)
 |put(e)	              | putLast(e)
 |offer(e, time, unit) | offerLast(e, time, unit)
 |---------------------|---------------------------------------
-| Remove              |
+| Remove              
 |---------------------|---------------------------------------
 | remove()            | removeFirst()
 | poll()              | pollFirst()
 | take()              | takeFirst()
 | poll(time, unit)    | pollFirst(time, unit)
 |---------------------|---------------------------------------
-| Examine (Проверка)  |
+| Examine (Проверка)  
 |---------------------|---------------------------------------
 | element()           | getFirst()
 | peek()              | peekFirst()
