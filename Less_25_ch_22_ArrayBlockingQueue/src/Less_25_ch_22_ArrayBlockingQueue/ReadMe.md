@@ -78,7 +78,7 @@ BlockingQueue не признает нулевых элементов (null) и 
 - третьи блокируют поток на неопределенное время до момента выполнения операции;
 - четвертые блокируют поток на определенное время.
 Эти методы представлены в следующем виде:
-
+------------------------------------------------------------------------------
 Вызывает | Exception | Чтение значения | Блокировка    | Чтение с задержкой
 ------------------------------------------------------------------------------
 Insert	 | add(e)    | offer(e)        | put(e)        | offer(e, time, unit)
@@ -113,6 +113,7 @@ Insert	 | addFirst(e)   | offerFirst(e)   | putFirst(e)   | offerFirst(e, time, 
 Remove	 | removeFirst() | pollFirst()     | takeFirst()   | pollFirst(time, unit)
 Проверка | getFirst()    | peekFirst()     | не применимый | не применимый
 ---------------------------------------------------------------------------------------
+
 Последний Элемент (хвост)
 ---------------------------------------------------------------------------------------
 Insert	 | addLast(e)    | offerLast(e)    | putLast(e)    | offerLast(e, time, unit)
@@ -133,6 +134,7 @@ offer(e)             | offerLast(e)
 put(e)	             | putLast(e)
 offer(e, time, unit) | offerLast(e, time, unit)
 ------------------------------------------------------------
+
 Remove
 ------------------------------------------------------------
 remove()             | removeFirst()
@@ -140,6 +142,7 @@ poll()               | pollFirst()
 take()               | takeFirst()
 poll(time, unit)     | pollFirst(time, unit)
 ------------------------------------------------------------
+
 Examine (Проверка)
 ------------------------------------------------------------
 element()            | getFirst()
@@ -269,7 +272,7 @@ offer...() возвращается false, если элемент не може
 а вернее его реализацию — класса LinkedBlockingDeque с установленными границами.
 Это далеко не лучший пример использования двусторонней очереди, но он позволяет
 показать применение API и возникающие при достижении предела очереди события.
-(см. пример [Less_25_LinkedBlockingDeque_Step4](./Less_25_LinkedBlockingDeque_Step4))
+(см. пример [Less_25_LinkedBlockingDeque_Step4](./Less_25_LinkedBlockingDeque_Step4.java))
 
 ---
 ### Очередь SynchronousQueue
@@ -282,7 +285,7 @@ offer...() возвращается false, если элемент не може
 блокировки, используемой в ArrayBlockingQueue.
 
 Синхронная очередь не имеет внутренней емкости, даже в один элемент.
-(см. пример [Less_25_SynchQueues_Step5](./Less_25_SynchQueues_Step5))
+(см. пример [Less_25_SynchQueues_Step5](./Less_25_SynchQueues_Step5.java))
 
 ---
 ### Очередь LinkedTransferQueue
@@ -295,7 +298,7 @@ offer...() возвращается false, если элемент не може
 Иначе говоря, реализация BlockingQueue гарантирует, что элемент, созданный
 производителем (Producer), должен находиться в очереди, в то время как реализация
 TransferQueue гарантирует, что элемент Producer'а «получает» потребитель (Consumer).
-(см. пример [Less_25_TransferQueue_Step6](./Less_25_TransferQueue_Step6))
+(см. пример [Less_25_TransferQueue_Step6](./Less_25_TransferQueue_Step6.java))
 
 ---
 ### Очередь DelayQueue
