@@ -114,26 +114,28 @@ BlockingQueue не признает нулевых элементов (null) и 
 | Remove	 | removeFirst() | pollFirst()     | takeFirst()   | pollFirst(time, unit)
 | Проверка | getFirst()    | peekFirst()     | не применимый | не применимый
 
-Последний Элемент (хвост)
----------------------------------------------------------------------------------------
-Insert	 | addLast(e)    | offerLast(e)    | putLast(e)    | offerLast(e, time, unit)
-Remove	 | removeLast()  | pollLast()      | takeLast()    | pollLast(time, unit)
-Проверка | addLast       | peekLast()      | не применимый | не применимый
----------------------------------------------------------------------------------------
+Последний Элемент (хвост):
+
+| Вызывает | Exception     | Чтение значения | Блокировка    | Чтение с задержкой
+|----------|---------------|-----------------|---------------|--------------------------
+| Insert	 | addLast(e)    | offerLast(e)    | putLast(e)    | offerLast(e, time, unit)
+| Remove	 | removeLast()  | pollLast()      | takeLast()    | pollLast(time, unit)
+| Проверка | addLast       | peekLast()      | не применимый | не применимый
+
 
 Реализация BlockingDeque может использоваться непосредственно в качестве BlockingQueue
 с механизмом FIFO. Следующие представленные в таблице методы и наследованные от интерфейса
 BlockingQueue, точно эквивалентны методам BlockingDeque :
 
 BlockingQueue method | Equivalent BlockingDeque method
-------------------------------------------------------------
-Insert
-------------------------------------------------------------
-add(e)	             | addLast(e)
-offer(e)             | offerLast(e)
-put(e)	             | putLast(e)
-offer(e, time, unit) | offerLast(e, time, unit)
-------------------------------------------------------------
+
+|Insert |
+|---------------------|---------------------------------------
+|add(e)	              | addLast(e)
+|offer(e)             | offerLast(e)
+|put(e)	              | putLast(e)
+|offer(e, time, unit) | offerLast(e, time, unit)
+
 
 Remove
 ------------------------------------------------------------
