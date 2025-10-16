@@ -127,23 +127,27 @@ BlockingQueue не признает нулевых элементов (null) и 
 с механизмом FIFO. Следующие представленные в таблице методы и наследованные от интерфейса
 BlockingQueue, точно эквивалентны методам BlockingDeque :
 
+**Insert:**  
+
 |BlockingQueue method | Equivalent BlockingDeque method
-|---------------------|---------------------------------------
-|Insert               
 |---------------------|---------------------------------------
 |add(e)	              | addLast(e)
 |offer(e)             | offerLast(e)
 |put(e)	              | putLast(e)
 |offer(e, time, unit) | offerLast(e, time, unit)
-|---------------------|---------------------------------------
-| Remove              
+
+**Remove:**
+
+|BlockingQueue method | Equivalent BlockingDeque method
 |---------------------|---------------------------------------
 | remove()            | removeFirst()
 | poll()              | pollFirst()
 | take()              | takeFirst()
 | poll(time, unit)    | pollFirst(time, unit)
-|---------------------|---------------------------------------
-| Examine (Проверка)  
+
+**Examine (Проверка):**
+
+|BlockingQueue method | Equivalent BlockingDeque method
 |---------------------|---------------------------------------
 | element()           | getFirst()
 | peek()              | peekFirst()
