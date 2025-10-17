@@ -83,9 +83,7 @@ synchronizedCollection().
 
 И снова, повторим, обертки управляют лишь методами набора данных get и put.
 Для обхода синхронизированной коллекции, код обхода коллекции должен быть
-синхронизирован на самой обертке.
-
----
+синхронизирован на самой обертке:
 
     List synchList = Collections.synchronizedList(new ArrayList());
     
@@ -95,3 +93,5 @@ synchronizedCollection().
                . . .               // Do something
         }
      }
+     
+---
