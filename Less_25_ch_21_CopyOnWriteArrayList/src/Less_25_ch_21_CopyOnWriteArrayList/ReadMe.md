@@ -37,11 +37,11 @@ Iterator.
 - CopyOnWriteArrayList (): создает пустой список
 - opyOnWriteArrayList (Collection 'c'): создает список, инициализированный со всеми элементами в 'c'
 - CopyOnWriteArrayList (Object [] obj): создает список, содержащий копию данного массива obj
-
 ---
+
 From https://www.geeksforgeeks.org/copyonwritearraylist-in-java/
----
 
+---
 Methods of CopyOnWriteArrayList:
 
 - add(E e) - Appends the specified element to the end of this list.
