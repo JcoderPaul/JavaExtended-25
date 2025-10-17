@@ -51,26 +51,26 @@ Constructors of ConcurrentHashMap:
   by the implementation. if the capacity of this map is 10. It means that it can store
   10 entries.
 
-1. ConcurrentHashMap(): Creates a new, empty map with a default initial capacity (16),
+1. **ConcurrentHashMap()** - Creates a new, empty map with a default initial capacity (16),
    load factor (0.75) and concurrencyLevel (16).
 
 Declaration: ConcurrentHashMap<K, V> chm = new ConcurrentHashMap<>();
 
-2. ConcurrentHashMap(int initialCapacity): Creates a new, empty map with the specified
+2. **ConcurrentHashMap(int initialCapacity)** - Creates a new, empty map with the specified
    initial capacity, and with default load factor (0.75) and concurrencyLevel (16).
 
 Declaration: ConcurrentHashMap<K, V> chm = new ConcurrentHashMap<>(int initialCapacity);
 
-3. ConcurrentHashMap(int initialCapacity, float loadFactor): Creates a new, empty map with the
+3. **ConcurrentHashMap(int initialCapacity, float loadFactor)** - Creates a new, empty map with the
    specified initial capacity and load factor and with the default concurrencyLevel (16).
 
 Declaration: ConcurrentHashMap<K, V> chm = new ConcurrentHashMap<>(int initialCapacity, float loadFactor);
 
-4. ConcurrentHashMap(int initialCapacity, float loadFactor, int concurrencyLevel): Creates a new, empty
+4. **ConcurrentHashMap(int initialCapacity, float loadFactor, int concurrencyLevel)** - Creates a new, empty
    map with the specified initial capacity, load factor, and concurrency level.
 
 Declaration: ConcurrentHashMap<K, V> chm = new ConcurrentHashMap<>(int initialCapacity, float loadFactor, int concurrencyLevel);
 
-5. ConcurrentHashMap(Map m): Creates a new map with the same mappings as the given map.
+5. **ConcurrentHashMap(Map m)** - Creates a new map with the same mappings as the given map.
 
 Declaration: ConcurrentHashMap<K, V> chm = new ConcurrentHashMap<>(Map m);
