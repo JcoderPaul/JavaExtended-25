@@ -1,4 +1,4 @@
-*** ConcurrentHashMap ***
+### ConcurrentHashMap
 
 До появления в JDK 1.5 реализации ConcurrentHashMap, существовало несколько способов
 описания хэш-таблиц. Первоначально в JDK 1.0 был клас Hashtable.
@@ -35,10 +35,11 @@ JDK 1.5 предоставила более производительный и 
 - Операции записи зачастую также могут выполняться параллельно без блокировок;
 - При создании указывается требуемый concurrencyLevel, определяемый по статистике чтения и записи;
 - Элементы Map имеют значение value, объявленное как volatile;
+---
 
-----------------------------------------------------------------------------------------------------
 From https://www.geeksforgeeks.org/concurrenthashmap-in-java/
 
+---
 - public class ConcurrentHashMap<K,V> extends AbstractMap<K,V> implements ConcurrentMap<K,V>, Serializable
 Here, K is the key Object type and V is the value Object type.
 
@@ -68,8 +69,7 @@ Declaration: ConcurrentHashMap<K, V> chm = new ConcurrentHashMap<>(int initialCa
 4. ConcurrentHashMap(int initialCapacity, float loadFactor, int concurrencyLevel): Creates a new, empty
    map with the specified initial capacity, load factor, and concurrency level.
 
-Declaration: ConcurrentHashMap<K, V> chm =
-                new ConcurrentHashMap<>(int initialCapacity, float loadFactor, int concurrencyLevel);
+Declaration: ConcurrentHashMap<K, V> chm = new ConcurrentHashMap<>(int initialCapacity, float loadFactor, int concurrencyLevel);
 
 5. ConcurrentHashMap(Map m): Creates a new map with the same mappings as the given map.
 
