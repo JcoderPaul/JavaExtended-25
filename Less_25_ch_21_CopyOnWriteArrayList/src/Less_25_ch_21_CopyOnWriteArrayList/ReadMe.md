@@ -1,9 +1,7 @@
-*** CopyOnWriteArrayList ***
+### CopyOnWriteArrayList
 
-----------------------------------------------------------------------------------
-public class CopyOnWriteArrayList<E>
-    implements List<E>, RandomAccess, Cloneable, java.io.Serializable
-----------------------------------------------------------------------------------
+        public class CopyOnWriteArrayList<E>
+            implements List<E>, RandomAccess, Cloneable, java.io.Serializable
 
 CopyOnWriteArrayList - это потокобезопасный вариант of ArrayList. Как и ArrayList,
 CopyOnWriteArray управляет массивом для хранения его элементов. Разница в том, что
@@ -26,22 +24,23 @@ Iterator.
 Это возможно потому, что любые действия add, set, remove, clear, .. на CopyOnWriteArrayList создают
 другой массив, который является копией текущего массива.
 
-!!!! Действия изменения элементов на самом Iterator (add, set, remove) не поддерживаются.
-Эти методы выбросают UnsupportedOperationException !!!
+        !!!! Действия изменения элементов на самом Iterator (add, set, remove) не поддерживаются.
+        Эти методы выбросают UnsupportedOperationException !!!
 
-!!! ПОВТОРИМ !!!
-Как следует из названия, CopyOnWriteArrayList создает клонированную внутреннюю копию базового
-ArrayList для каждой операции add () или set () . Из-за этих дополнительных накладных расходов
-в идеале мы должны использовать CopyOnWriteArrayList только тогда, когда у нас очень частые
-операции чтения, а не много вставок или обновлений.
+        !!! ПОВТОРИМ !!!
+        Как следует из названия, CopyOnWriteArrayList создает клонированную внутреннюю копию базового
+        ArrayList для каждой операции add () или set () . Из-за этих дополнительных накладных расходов
+        в идеале мы должны использовать CopyOnWriteArrayList только тогда, когда у нас очень частые
+        операции чтения, а не много вставок или обновлений.
 
 Мы можем использовать один из следующих конструкторов для создания CopyOnWriteArrayList :
 - CopyOnWriteArrayList (): создает пустой список
 - opyOnWriteArrayList (Collection 'c'): создает список, инициализированный со всеми элементами в 'c'
 - CopyOnWriteArrayList (Object [] obj): создает список, содержащий копию данного массива obj
 
---------------------------------------------------------------------------------------------------------
+---
 From https://www.geeksforgeeks.org/copyonwritearraylist-in-java/
+---
 
 Methods of CopyOnWriteArrayList:
 
