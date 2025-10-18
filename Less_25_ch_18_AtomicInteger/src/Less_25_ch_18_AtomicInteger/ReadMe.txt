@@ -1,15 +1,15 @@
-*** AtomicInteger ***
+### AtomicInteger
 
 Чтобы разобрать использование атомарных операций в Java рассмотрим следующий пример:
----------------------------------------------------------------------------------------
-public class Counter {
-    int counter;
 
-    public void increment() {
-        counter++;
-    }
-}
----------------------------------------------------------------------------------------
+        public class Counter {
+            int counter;
+        
+            public void increment() {
+                counter++;
+            }
+        }
+
 В случае однопоточной среды это работает отлично; однако, как только мы разрешаем запись
 более чем одному потоку, мы начинаем получать противоречивые результаты. Причина этому в
 операции приращения (counter++), которая может выглядеть как атомарная операция, но на
@@ -23,15 +23,15 @@ public class Counter {
 Один из способов управления доступом к объекту - использование блокировок. Этого можно
 достичь, используя ключевое слово synchronized в сигнатуре метода приращения. Ключевое
 слово synchronized гарантирует, что только один поток может входить в метод одновременно:
----------------------------------------------------------------------------------------
-public class SynchronizedCounterWithLock {
-    private volatile int counter;
 
-    public synchronized void increment() {
-        counter++;
-    }
-}
----------------------------------------------------------------------------------------
+        public class SynchronizedCounterWithLock {
+            private volatile int counter;
+        
+            public synchronized void increment() {
+                counter++;
+            }
+        }
+
 Кроме того, нам нужно добавить ключевое слово volatile, чтобы обеспечить надлежащую видимость
 ссылок среди потоков.
 
@@ -46,7 +46,8 @@ public class SynchronizedCounterWithLock {
 может быть намного больше, чем фактическое выполнение кода, что значительно снижает общую
 эффективность.
 
-*** Атомарные операции ***
+---
+### Атомарные операции
 
 Существует направление исследований, посвященное созданию неблокирующих алгоритмов для
 конкурентных сред. Эти алгоритмы используют низкоуровневые атомарные машинные инструкции,
@@ -72,89 +73,78 @@ public class SynchronizedCounterWithLock {
 его снова и снова, пока он не увенчается успехом, или мы можем ничего не делать и двигаться
 дальше в зависимости от варианта использования.
 
-*** Методы приращения и уменьшения в классе AtomicInteger ***
+---
+### Методы приращения и уменьшения в классе AtomicInteger
 
 Первая группа методов обновляет значение и возвращает то, которое было до обновления:
 
-*** Группа методов обновляет значение и возвращает то, которое было до обновления:
+**Группа методов обновляет значение и возвращает то, которое было до обновления:**
 - public int getAndAdd (int delta) - Atomiclly добавляет данное значение к текущему значению;
 
----------------------------------------------------------------------------------------
-public final int getAndAdd(int delta) {
-    for (;;) {
-        int current = get();
-        int next = current + delta;
-        if (compareAndSet(current, next))
-            return current;
-    }
-}
----------------------------------------------------------------------------------------
+        public final int getAndAdd(int delta) {
+            for (;;) {
+                int current = get();
+                int next = current + delta;
+                if (compareAndSet(current, next))
+                    return current;
+            }
+        }
 
 - public int getAndDecrement () - Атомно уменьшает на единицу текущее значение;
 
----------------------------------------------------------------------------------------
-public final int getAndDecrement() {
-    for (;;) {
-        int current = get();
-        int next = current - 1;
-        if (compareAndSet(current, next))
-            return current;
-    }
-}
----------------------------------------------------------------------------------------
+        public final int getAndDecrement() {
+            for (;;) {
+                int current = get();
+                int next = current - 1;
+                if (compareAndSet(current, next))
+                    return current;
+            }
+        }
 
 - public int getAndIncrement () - Атомно увеличивает на единицу текущее значение;
 
----------------------------------------------------------------------------------------
-public final int getAndIncrement() {
-   for (;;) {
-       int current = get();
-       int next = current + 1;
-       if (compareAndSet(current, next))
-           return current;
-   }
-}
----------------------------------------------------------------------------------------
+        public final int getAndIncrement() {
+           for (;;) {
+               int current = get();
+               int next = current + 1;
+               if (compareAndSet(current, next))
+                   return current;
+           }
+        }
 
-*** Вторая группа методов обновляет значение и возвращает то, которое стало после обновления:
+**Вторая группа методов обновляет значение и возвращает то, которое стало после обновления:**
 - public int incrementAndGet () - Атомно увеличивает на единицу текущее значение;
 
----------------------------------------------------------------------------------------
-public final int incrementAndGet() {
-    for (;;) {
-        int current = get();
-        int next = current + 1;
-        if (compareAndSet(current, next))
-            return next;
-    }
-}
----------------------------------------------------------------------------------------
+        public final int incrementAndGet() {
+            for (;;) {
+                int current = get();
+                int next = current + 1;
+                if (compareAndSet(current, next))
+                    return next;
+            }
+        }
 
 - public int decrementAndGet () - Атомно уменьшает на единицу текущее значение;
 
----------------------------------------------------------------------------------------
-public final int decrementAndGet() {
-    for (;;) {
-        int current = get();
-        int next = current - 1;
-        if (compareAndSet(current, next))
-            return next;
-    }
-}
----------------------------------------------------------------------------------------
+        public final int decrementAndGet() {
+            for (;;) {
+                int current = get();
+                int next = current - 1;
+                if (compareAndSet(current, next))
+                    return next;
+            }
+        }
 
 - public int addAndGet (int delta) - Атомно добавляет данное значение к текущему значению;
 
----------------------------------------------------------------------------------------
-public final int addAndGet(int delta) {
-    for (;;) {
-        int current = get();
-        int next = current + delta;
-        if (compareAndSet(current, next))
-            return next;
-    }
-}
----------------------------------------------------------------------------------------
+        public final int addAndGet(int delta) {
+            for (;;) {
+                int current = get();
+                int next = current + delta;
+                if (compareAndSet(current, next))
+                    return next;
+            }
+        }
 
 Как видно во многих случаях используется функция compareAndSet,
 представляющая операцию CAS (compare-and-swap), которая использует
@@ -164,11 +154,9 @@ unsafe пакет:
   значение для данного обновленного значения, если текущее значение совпадает с
   ожидаемым значением;
 
----------------------------------------------------------------------------------------
-public final boolean compareAndSet(int expect, int update) {
-   return unsafe.compareAndSwapInt(this, valueOffset, expect, update);
-}
----------------------------------------------------------------------------------------
+        public final boolean compareAndSet(int expect, int update) {
+           return unsafe.compareAndSwapInt(this, valueOffset, expect, update);
+        }
 
 - public double doubleValue () - Возвращает значение указанного числа в виде двойного числа;
 - public float floatValue () - Возвращает значение указанного числа в виде числа с плавающей запятой;
@@ -182,30 +170,29 @@ public final boolean compareAndSet(int expect, int update) {
 - public void lazySet (int newValue) - Метод класса AtomicReference используется для установки значения
   объекта AtomicReference с эффектами памяти, как указано в VarHandle.setRelease(java.lang.Object…), чтобы
   гарантировать, что предыдущие загрузки и сохранения не будут переупорядочены после этого доступа;
----------------------------------------------------------------------------------------
-// Java program to demonstrate
-// AtomicReference.lazySet() method
-import java.util.concurrent.atomic.AtomicReference;
 
-public class GFG {
-    public static void main(String[] args)
-    {
-
-        // create an atomic reference object.
-        AtomicReference<Integer> ref
-            = new AtomicReference<Integer>();
-
-        // set some value using lazySet method
-        ref.lazySet(67545678);
-
-        // print value
-        System.out.println("Integer value = "
-                           + ref.get());
-    }
-}
-
-На экране: Integer value = 67545678
----------------------------------------------------------------------------------------
+        // Java program to demonstrate
+        // AtomicReference.lazySet() method
+        import java.util.concurrent.atomic.AtomicReference;
+        
+        public class GFG {
+            public static void main(String[] args)
+            {
+        
+                // create an atomic reference object.
+                AtomicReference<Integer> ref
+                    = new AtomicReference<Integer>();
+        
+                // set some value using lazySet method
+                ref.lazySet(67545678);
+        
+                // print value
+                System.out.println("Integer value = "
+                                   + ref.get());
+            }
+        }
+        
+        На экране: Integer value = 67545678
 
 - public long longValue () - Возвращает значение указанного числа в виде long;
 
