@@ -3,7 +3,7 @@
 этом пакете расширяют понятие volatile значений, полей и элементов массива до тех,
 которые также обеспечивают атомарную операцию условного обновления формы:
 
-- boolean compareAndSet(expectedValue, updateValue);
+        - boolean compareAndSet(expectedValue, updateValue);
 
 Этот метод (который различается по типам аргументов в разных классах) атомарно
 устанавливает переменную updateValue, если она в настоящее время содержит ожидаемое
@@ -25,30 +25,27 @@
 Например, классы AtomicLong и AtomicInteger предоставляют методы атомарного приращения.
 
 Одно из применений - создание порядковых номеров, например:
----------------------------------------------------------------------------------------
-class Sequencer {
-    private final AtomicLong sequenceNumber = new AtomicLong(0);
-    public long next() {
-        return sequenceNumber.getAndIncrement();
-    }
-}
----------------------------------------------------------------------------------------
+
+        class Sequencer {
+            private final AtomicLong sequenceNumber = new AtomicLong(0);
+            public long next() {
+                return sequenceNumber.getAndIncrement();
+            }
+        }
 
 Несложно определить новые служебные функции, которые, как и getAndIncrement, атомарно
 применяют функцию к значению.
 
 Например, учитывая некоторую трансформацию long transform(long input) можно написать следующее:
 
----------------------------------------------------------------------------------------
-long getAndTransform(AtomicLong var) {
-    long prev, next;
-    do {
-      prev = var.get();
-      next = transform(prev);
-    } while (!var.compareAndSet(prev, next));
-    return prev; // return next; для transformAndGet
-}
----------------------------------------------------------------------------------------
+        long getAndTransform(AtomicLong var) {
+            long prev, next;
+            do {
+              prev = var.get();
+              next = transform(prev);
+            } while (!var.compareAndSet(prev, next));
+            return prev; // return next; для transformAndGet
+        }
 
 Эффекты памяти для доступа и обновления атомарных переменных обычно соответствуют правилам
 для volatile, как указано в Спецификации языка Java (модель памяти 17.4):
