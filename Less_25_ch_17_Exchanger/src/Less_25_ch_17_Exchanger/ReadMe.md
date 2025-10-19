@@ -9,8 +9,9 @@
 типизированным и типизируется типом данных, которыми потоки должны обмениваться.
 
 Обмен данными производится с помощью единственного метода этого класса exchange():
+
 - V exchange(V x) throws InterruptedException;
- -V exchange(V x, long timeout, TimeUnit unit) throws InterruptedException, TimeoutException;
+- V exchange(V x, long timeout, TimeUnit unit) throws InterruptedException, TimeoutException;
 
 Параметр x представляет буфер данных для обмена. Вторая форма метода также
 определяет параметр timeout - время ожидания и unit - тип временных единиц,
