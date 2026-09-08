@@ -1,4 +1,4 @@
-- **См. исходную статью (ENG): [Class Optional<T>](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)**
+- **См. исходную статью (ENG): [`Class Optional<T>`](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)**
 
 ---
 ### Class Optional - Класс Optional
@@ -38,7 +38,7 @@
 - `String toString()` - Возвращает непустое строковое представление этого опционала, пригодное для отладки.
 
 ---
-- **Более подробно см. [Class Optional<T>](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)**
+- **Более подробно см. [`Class Optional<T>`](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)**
 
 ---
 **Доп. материал:**
