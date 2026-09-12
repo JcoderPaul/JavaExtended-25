@@ -18,13 +18,25 @@
 
 Данная задача решается по шагам: 
 - [HW_3_Step1](../Less_25_HW/Less_25_HW_3_Step1.java) - Задача решается сквозным кодом, кроме статического метода `*.getArrayOfRandomElement()`.
-Комментарии расписывают, что происходит. Для понимания и повторения (см. [InterfaceSupplier](../Less_25_HW/InterfaceSupplier.md), [InterfaceStream](../Less_25_HW/InterfaceIntStream.md), [FutureCallable](../Less_25_HW/FutureCallable.txt), [ClassOptional](../Less_25_HW/src/Less_25_HW/ClassOptional.txt))
-- [HW_3_Step2](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/Less_25_HW_3_Step2.java) - Попытка оптимизировать предыдущий код, разделив отдельные операции на классы и методы.
-- [HW_3_Step3](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/Less_25_HW_3_Step3.java) - Повторная оптимизация с применением интерфейса [Supplier](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/InterfaceSupplier.txt).
+Комментарии расписывают, что происходит. Для понимания и повторения (см. [InterfaceSupplier](../Less_25_HW/InterfaceSupplier.md), [InterfaceStream](../Less_25_HW/InterfaceStream.md), [FutureCallable](../Less_25_HW/FutureCallable.md), [ClassOptional](../Less_25_HW/src/Less_25_HW/ClassOptional.md))
+- [HW_3_Step2](../Less_25_HW/Less_25_HW_3_Step2.java) - Попытка оптимизировать предыдущий код, разделив отдельные операции на классы и методы.
+- [HW_3_Step3](../Less_25_HW/Less_25_HW_3_Step3.java) - Повторная оптимизация с применением интерфейса [Supplier](../Less_25_HW/InterfaceSupplier.md).
 
-Русифицированная документация по применяемым классам и методам JAVA:
+**Русифицированная документация по применяемым классам и методам JAVA:**
 - [ThreadLocal](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/ThreadLocal.md)
-- [InterfaceSupplier](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/InterfaceSupplier.txt)
-- [InterfaceIntStream](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/InterfaceIntStream.txt)
-- [FutureCallable](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/FutureCallable.txt)
-- [ClassOptional](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/ClassOptional.txt)
+- [InterfaceSupplier](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/InterfaceSupplier.md)
+- [InterfaceIntStream](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/InterfaceStream.md)
+- [FutureCallable](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/FutureCallable.md)
+- [ClassOptional](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/ClassOptional.md)
+
+---
+**Доп. материал:**
+- [Multithreading in Java](https://www.geeksforgeeks.org/java/multithreading-in-java/)
+- [Java Concurrency and Multithreading Tutorial](https://jenkov.com/tutorials/java-concurrency/index.html)
+- [A Beginner’s Guide to Multithreading in Java(Part 1)](https://medium.com/@pratik.941/a-beginners-guide-to-multithreading-in-java-part-1-5a4834b04693)
+- [Multithreading in Java: Concepts, Examples, and Best Practices](https://www.digitalocean.com/community/tutorials/multithreading-in-java)
+- [Java Thread Example?](https://stackoverflow.com/questions/2531938/java-thread-example)
+- [Java - Multithreading](https://www.tutorialspoint.com/java/java_multithreading.htm)
+- [Java Programming Tutorial - Multithreading & Concurrent Programming](https://www3.ntu.edu.sg/home/ehchua/programming/java/J5e_multithreading.html)
+- [Java Threads](https://www.w3schools.com/java/java_threads.asp)
+- [Multithreading in Java](https://www.tpointtech.com/multithreading-in-java)
