@@ -18,16 +18,16 @@
 
 Данная задача решается по шагам: 
 - [HW_3_Step1](../Less_25_HW/Less_25_HW_3_Step1.java) - Задача решается сквозным кодом, кроме статического метода `*.getArrayOfRandomElement()`.
-Комментарии расписывают, что происходит. Для понимания и повторения (см. [InterfaceSupplier](../Less_25_HW/InterfaceSupplier.md), [InterfaceStream](../Less_25_HW/InterfaceStream.md), [FutureCallable](../Less_25_HW/FutureCallable.md), [ClassOptional](../Less_25_HW/src/Less_25_HW/ClassOptional.md))
+Комментарии расписывают, что происходит. Для понимания и повторения (см. [InterfaceSupplier](../Less_25_HW/InterfaceSupplier.md), [InterfaceStream](../Less_25_HW/InterfaceStream.md), [FutureCallable](../Less_25_HW/FutureCallable.md), [ClassOptional](../Less_25_HW/ClassOptional.md))
 - [HW_3_Step2](../Less_25_HW/Less_25_HW_3_Step2.java) - Попытка оптимизировать предыдущий код, разделив отдельные операции на классы и методы.
 - [HW_3_Step3](../Less_25_HW/Less_25_HW_3_Step3.java) - Повторная оптимизация с применением интерфейса [Supplier](../Less_25_HW/InterfaceSupplier.md).
 
 **Русифицированная документация по применяемым классам и методам JAVA:**
-- [ThreadLocal](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/ThreadLocal.md)
-- [InterfaceSupplier](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/InterfaceSupplier.md)
-- [InterfaceIntStream](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/InterfaceStream.md)
-- [FutureCallable](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/FutureCallable.md)
-- [ClassOptional](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW/src/Less_25_HW/ClassOptional.md)
+- [ThreadLocal](../Less_25_HW/ThreadLocal.md)
+- [InterfaceSupplier](../Less_25_HW/InterfaceSupplier.md)
+- [InterfaceStream](../Less_25_HW/InterfaceStream.md)
+- [FutureCallable](../Less_25_HW/FutureCallable.md)
+- [ClassOptional](../Less_25_HW/ClassOptional.md)
 
 ---
 **Доп. материал:**
