@@ -1,12 +1,10 @@
 Повторение пройденного материала по многопоточности - Multithreading. Примеры и комментарии.
 Отдельные уроки содержат:
-- [../Less_25_HW_2/Less_25_HW_JoinInOtherThread.java) - применение метода *.join() не только в основном потоке.
-- [../Less_25_HW_2/Less_25_HW_WhichIsFasterOneThreadOrMany.java) - наглядный пример того, что многопоточность
-                                            при правильном применении позволяет значительно
-                                            увеличить скорость работы приложения.
-- [Less_25_HW_DaemonThread](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW_2/src/Less_25_HW_2/Less_25_HW_DaemonThread.java) - пример создания и работы потока-демона.
-- [Less_25_HW_DaemonInThreadPool](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW_2/src/Less_25_HW_2/Less_25_HW_DaemonInThreadPool.java) - пример того, как создать пул потоков демонов.
-- [Less_25_HW_DaemonInInfoLoadSimulation](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW_2/src/Less_25_HW_2/Less_25_HW_DaemonInInfoLoadSimulation.java) - пример создания пула потоков демонов.
+- [Less_25_HW_JoinInOtherThread](../Less_25_HW_2/Less_25_HW_JoinInOtherThread.java) - применение метода *.join() не только в основном потоке.
+- [Less_25_HW_WhichIsFasterOneThreadOrMany](../Less_25_HW_2/Less_25_HW_WhichIsFasterOneThreadOrMany.java) - наглядный пример того, что многопоточность при правильном применении позволяет значительно увеличить скорость работы приложения.
+- [Less_25_HW_DaemonThread](../Less_25_HW_2/Less_25_HW_DaemonThread.java) - пример создания и работы потока-демона.
+- [Less_25_HW_DaemonInThreadPool](../Less_25_HW_2/Less_25_HW_DaemonInThreadPool.java) - пример того, как создать пул потоков демонов.
+- [Less_25_HW_DaemonInInfoLoadSimulation](../Less_25_HW_2/Less_25_HW_DaemonInInfoLoadSimulation.java) - пример создания пула потоков демонов.
 
 Папки содержат:
 - [AtomicDate](https://github.com/JcoderPaul/JavaExtended-25/tree/master/Less_25_HW_2/src/Less_25_HW_2/AtomicDate) - примеры работы с атомиками.
