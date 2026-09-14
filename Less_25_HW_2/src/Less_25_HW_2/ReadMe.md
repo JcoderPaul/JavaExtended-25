@@ -1,7 +1,7 @@
 Повторение пройденного материала по многопоточности - Multithreading. Примеры и комментарии.
 Отдельные уроки содержат:
-- [Less_25_HW_JoinInOtherThread](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW_2/src/Less_25_HW_2/Less_25_HW_JoinInOtherThread.java) - применение метода *.join() не только в основном потоке.
-- [Less_25_HW_WhichIsFasterOneThreadOrMany](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW_2/src/Less_25_HW_2/Less_25_HW_WhichIsFasterOneThreadOrMany.java) - наглядный пример того, что многопоточность
+- [../Less_25_HW_2/Less_25_HW_JoinInOtherThread.java) - применение метода *.join() не только в основном потоке.
+- [../Less_25_HW_2/Less_25_HW_WhichIsFasterOneThreadOrMany.java) - наглядный пример того, что многопоточность
                                             при правильном применении позволяет значительно
                                             увеличить скорость работы приложения.
 - [Less_25_HW_DaemonThread](https://github.com/JcoderPaul/JavaExtended-25/blob/master/Less_25_HW_2/src/Less_25_HW_2/Less_25_HW_DaemonThread.java) - пример создания и работы потока-демона.
