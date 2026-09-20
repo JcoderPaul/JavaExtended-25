@@ -27,6 +27,7 @@
 - [Executor - интерфейс](https://docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html), содержащий [метод execute()](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html#execute-java.lang.Runnable-) для запуска задачи, заданной запускаемым объектом Runnable;
     
 - [ExecutorService - интерфейс](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html) потомок [интерфейса Executor](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html), который добавляет функциональность для управления жизненным циклом потоков.
+
 Он включает в себя [метод submit()](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html#submit-java.lang.Runnable-), который
 аналогичен [методу execute()](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html#execute-java.lang.Runnable-), но более универсален.
 Перегруженные версии метода submit() могут принимать как [выполняемый *Runnable*](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html#submit-java.lang.Runnable-),
