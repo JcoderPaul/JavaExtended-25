@@ -21,11 +21,11 @@
 общие формы которого приведены ниже:
 - [`void await() throws InterruptedException`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CountDownLatch.html#await--) - ожидание длится до тех пор, пока отсчет, связанный с вызывающим объектом типа CountDownLatch, не достигнет нуля.
 
-Cм. пример [Less_25_CountDownLatch_Step1](../Less_25_CountDownLatch_Step1.java)
+**- Cм. пример [Less_25_CountDownLatch_Step1](./Less_25_CountDownLatch_Step1.java)**
 
 - [`boolean await(long 'ожидание', TimeUnit 'единица_времени') throws InterruptedException`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CountDownLatch.html#await-long-java.util.concurrent.TimeUnit-) - ожидание длится только в течение определенного периода времени, определяемого параметром 'ожидание'. Время ожидания указывается в единицах, обозначаемых параметром 'единица_времени', который принимает объект перечисления [TimeUnit](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html).
 
-Cм. пример [Less_25_CountDownLatch_Step2](../Less_25_CountDownLatch_Step2.java)
+**- Cм. пример [Less_25_CountDownLatch_Step2](./Less_25_CountDownLatch_Step2.java)**
 
 Метод await() изначально возвращает логическое значение false. Если достигнут предел времени ожидания, или если обратный отсчет достигает нуля, тогда возвращается true.
 
