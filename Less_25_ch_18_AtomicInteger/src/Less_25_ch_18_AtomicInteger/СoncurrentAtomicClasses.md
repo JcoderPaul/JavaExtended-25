@@ -133,7 +133,7 @@
 
 ---
 - [Java Concurrency - Part 1 : Threads](https://baptiste-wicht.com/posts/2010/05/java-concurrency-part-1-threads.html)
-- [Java Concurrency : Part 2 - Manipulate Threads](https://baptiste-wicht.com/posts/2010/05/java-concurrency-part-2-manipulate-threads.html)
+- [Java Concurrency - Part 2 : Manipulate Threads](https://baptiste-wicht.com/posts/2010/05/java-concurrency-part-2-manipulate-threads.html)
 - [Java Concurrency – Part 3 : Synchronization with intrinsic locks](https://baptiste-wicht.com/posts/2010/08/java-concurrrency-synchronization-locks.html)
 - [Java Concurrency - Part 4 : Semaphores](https://baptiste-wicht.com/posts/2010/08/java-concurrency-part-4-semaphores.html)
 - [Java Concurrency - Part 5 : Monitors (Locks and Conditions)](https://baptiste-wicht.com/posts/2010/09/java-concurrency-part-5-monitors-locks-and-conditions.html)
