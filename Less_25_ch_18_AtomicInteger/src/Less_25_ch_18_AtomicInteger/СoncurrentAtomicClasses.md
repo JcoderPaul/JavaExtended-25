@@ -5,7 +5,7 @@
 также обеспечивают атомарную операцию условного обновления формы:
 
 ```
-        - boolean compareAndSet(expectedValue, updateValue);
+        boolean compareAndSet(expectedValue, updateValue);
 ```
 
 Этот метод (который различается по типам аргументов в разных классах) атомарно устанавливает переменную updateValue, если она в настоящее время содержит ожидаемое значение, 
@@ -16,7 +16,7 @@
 поддержка может повлечь за собой некоторую форму внутренней блокировки. Таким образом, не гарантируется, что методы будут неблокирующими - поток может временно заблокироваться 
 перед выполнением операции.
 
-Каждый из экземпляров классов
+Каждый из экземпляров классов:
 - [AtomicBoolean](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicBoolean.html),
 - [AtomicInteger](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html),
 - [AtomicLong](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html),
@@ -69,6 +69,7 @@
 - [AtomicReferenceFieldUpdater](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicReferenceFieldUpdater.html),
 - [AtomicIntegerFieldUpdater](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicIntegerFieldUpdater.html)
 - [AtomicLongFieldUpdater](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLongFieldUpdater.html).
+
 Это утилиты на основе рефлексии, которые обеспечивают доступ к связанным типам полей. В основном они используются в атомарных структурах данных, в которых несколько volatile полей одного и
 того же узла (например, ссылки узла дерева) независимо подвергаются атомарным обновлениям. Эти классы обеспечивают большую гибкость в том, как и когда использовать атомарные обновления, за
 счет более неуклюжей настройки на основе рефлексии, менее удобного использования и более слабых гарантий.
