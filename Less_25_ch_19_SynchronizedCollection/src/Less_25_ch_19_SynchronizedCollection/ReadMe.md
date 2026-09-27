@@ -1,6 +1,6 @@
 ### Cинхронизированные коллекции
 
-[Фреймворк collections](Collections Framework Overview) является ключевым компонентом Java. Он предоставляет большое
+[Фреймворк collections]([Collections Framework Overview](https://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html)) является ключевым компонентом Java. Он предоставляет большое
 количество интерфейсов и реализаций, что позволяет нам создавать различные типы коллекций и управлять ими простым 
 способом.
 
