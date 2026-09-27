@@ -15,7 +15,7 @@
 - **Метод [synchronizedCollection()](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#synchronizedCollection-java.util.Collection-)** - Синхронизированная оболочка -
 возвращает потокобезопасную коллекцию, резервную копию которой создает указанная коллекция [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html).
 
-См. пример [Less_25_SynchronizedCollection_Step4](./Less_25_SynchronizedCollection_Step4.java))
+См. пример [Less_25_SynchronizedCollection_Step4](./Less_25_SynchronizedCollection_Step4.java)
 
 - **Метод [synchronizedList()](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#synchronizedList-java.util.List-)** - Аналогично методу synchronizedCollection(), мы
 можем использовать оболочку [synchronizedList()](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#synchronizedList-java.util.List-) для создания синхронизированного
@@ -33,13 +33,13 @@ cписка (List). Метод возвращает потокобезопасн
 
 Использование метода synchronizedList() выглядит почти идентично его аналогу более высокого уровня, synchronizedCollection().
 
-См. пример [Less_25_SynchronizedCollection_Step3](./Less_25_SynchronizedCollection_Step3.java))
+См. пример [Less_25_SynchronizedCollection_Step2](./Less_25_SynchronizedCollection_Step2.java)
 
 **!!! Если мы хотим выполнить итерацию по синхронизированной коллекции и хотим избежать
 неожиданных результатов, мы должны явно реализовать синхронизацию цикла итератора,
 заключив его в синхронизированный блок!!!**
 
-См. пример [Less_25_SynchronizedCollection_Step3](./Less_25_SynchronizedCollection_Step3.java))
+См. пример [Less_25_SynchronizedCollection_Step3](./Less_25_SynchronizedCollection_Step3.java)
 
 Во всех случаях, когда нам нужно выполнить итерацию по синхронизированной коллекции, мы должны реализовать эту идиому. 
 Это связано с тем, что итерация синхронизированной коллекции выполняется с помощью нескольких вызовов коллекции. 
