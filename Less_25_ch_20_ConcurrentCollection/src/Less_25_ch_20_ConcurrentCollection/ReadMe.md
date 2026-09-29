@@ -1,4 +1,4 @@
-См. исходник (ENG): Class [`ConcurrentHashMap<K,V>`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)
+См. исходник (ENG): [`ConcurrentHashMap<K,V>`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)
 
 ---
 ### ConcurrentHashMap
