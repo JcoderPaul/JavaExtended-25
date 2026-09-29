@@ -35,10 +35,6 @@ JDK 1.5 предоставила более [производительный и
 - Элементы Map имеют значение value, объявленное как volatile;
 
 ---
-**См. доп. материал:** [ConcurrentHashMap in Java](https://www.geeksforgeeks.org/java/concurrenthashmap-in-java/)
-
----
-
 ```
 public class ConcurrentHashMap<K,V> extends 
     AbstractMap<K,V> 
@@ -50,11 +46,9 @@ public class ConcurrentHashMap<K,V> extends
 - V — тип объекта-значения.
 
 Конструкторы ConcurrentHashMap:
-- Concurrency-Level (уровень параллелизма) — количество потоков, одновременно обновляющих Map. 
-Реализация выполняет внутреннюю настройку размера, чтобы обеспечить поддержку заданного количества потоков.
+- Concurrency-Level (уровень параллелизма) — количество потоков, одновременно обновляющих Map. Реализация выполняет внутреннюю настройку размера, чтобы обеспечить поддержку заданного количества потоков.
 - Коэффициент загрузки (Load-Factor) — это пороговое значение, используемое для управления изменением размера.
-- Начальная емкость (Initial Capacity) - количество элементов, на которое изначально рассчитана реализация.
-Если емкость данной Map равна 10, это означает, что она может хранить 10 записей.
+- Начальная емкость (Initial Capacity) - количество элементов, на которое изначально рассчитана реализация. Если емкость данной Map равна 10, это означает, что она может хранить 10 записей.
 
 1. `ConcurrentHashMap()` - Создает новую пустую Map-у с начальным размером таблицы по умолчанию (16), фактором загрузки - 0.75, и уровнем параллелизма - 16.
 ```
@@ -68,7 +62,7 @@ public class ConcurrentHashMap<K,V> extends
 
 3. `ConcurrentHashMap(int initialCapacity, float loadFactor)` - Создает новую пустую Map-у с заданной начальной емкостью - `initialCapacity`, с фактором загрузки - `loadFactor`, и уровнем параллелизма - 16.
 ```
-  Declaration: ConcurrentHashMap<K, V> chm = new ConcurrentHashMap<>(int initialCapacity, float loadFactor);
+  ConcurrentHashMap<K, V> chm = new ConcurrentHashMap<>(int initialCapacity, float loadFactor);
 ```
 
 4. `ConcurrentHashMap(int initialCapacity, float loadFactor, int concurrencyLevel)` - Создает новую пустую Map-у с заданной начальной емкостью - `initialCapacity`, с фактором загрузки - `loadFactor`, и уровнем параллелизма - `concurrencyLevel`.
@@ -78,7 +72,7 @@ public class ConcurrentHashMap<K,V> extends
 
 5. `ConcurrentHashMap(Map m)` - Создает новую Map-у с теми же характеристиками, что и у переданной Map-ы.
 ```
-  Declaration: ConcurrentHashMap<K, V> chm = new ConcurrentHashMap<>(Map m);
+  ConcurrentHashMap<K, V> chm = new ConcurrentHashMap<>(Map m);
 ```
 
 ---
