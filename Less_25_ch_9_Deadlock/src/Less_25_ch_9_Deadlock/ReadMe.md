@@ -24,7 +24,7 @@
 
 Переговоры зашли в тупик - смертельный замок - Deadlock.
 
-Классический пример из «tutorial» – учебного пособия java.docs приведен в [Less_25_Deadlock_Step1](../src/Less_25_ch_9_Deadlock/Less_25_Deadlock_Step1.java).
+Классический пример из «tutorial» – учебного пособия java.docs приведен в [Less_25_Deadlock_Step1](./Less_25_Deadlock_Step1.java).
 
 Например, добавлен какой-то метод, позволяющий другой нити успеть выполниться.
 
