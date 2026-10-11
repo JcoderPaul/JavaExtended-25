@@ -51,23 +51,23 @@
 ---
 По умолчанию именем главного потока будет main.
 Для управления потоком класс Thread предоставляет ряд методов. Наиболее используемые из них:
-- getName(): возвращает имя потока;
-- setName(String name): устанавливает имя потока;
-- getPriority(): возвращает приоритет потока;
-- setPriority(int proirity): устанавливает приоритет потока. Приоритет является одним из ключевых 
+- `getName()` - возвращает имя потока;
+- `setName(String name)` - устанавливает имя потока;
+- `getPriority()` - возвращает приоритет потока;
+- `setPriority(int proirity)` - устанавливает приоритет потока. Приоритет является одним из ключевых 
   факторов для выбора системой потока из кучи потоков для выполнения. В этот метод в качестве параметра 
   передается числовое значение приоритета - от 1 до 10. По умолчанию главному потоку выставляется 
   средний приоритет - 5;
-- isAlive(): возвращает true, если поток активен;
-- isInterrupted(): возвращает true, если поток был прерван;
-- join(): ожидает завершение потока;
-- run(): определяет точку входа в поток;
-- sleep(): приостанавливает поток на заданное количество миллисекунд;
-- start(): запускает поток, вызывая его метод run();
+- `isAlive()` - возвращает true, если поток активен;
+- `isInterrupted()` - возвращает true, если поток был прерван;
+- `join()` - ожидает завершение потока;
+- `run()` - определяет точку входа в поток;
+- `sleep()` - приостанавливает поток на заданное количество миллисекунд;
+- `start()` - запускает поток, вызывая его метод run();
 
 ---
 В примерах напоминалках рассмотрены:
-- [Less_25_ch_1_ClassThread](https://github.com/JcoderPaul/JavaExtended-25/tree/master/Less_25_ch_1_ClassThread/src/Less_25_ch_1_ClassThread)
+- [Less_25_ch_1_ClassThread](../Less_25_ch_1_ClassThread)
 - [Less_25_ch_2_InterfaceRunnable](https://github.com/JcoderPaul/JavaExtended-25/tree/master/Less_25_ch_2_InterfaceRunnable/src/Less_25_ch_2_InterfaceRunnable)
 - [Less_25_ch_3_ThreadNamePriority](https://github.com/JcoderPaul/JavaExtended-25/tree/master/Less_25_ch_3_ThreadNamePriority/src/Less_25_ch_3_ThreadNamePriority)
 - [Less_25_ch_4_SleepJoinThread](https://github.com/JcoderPaul/JavaExtended-25/tree/master/Less_25_ch_4_SleepJoinThread/src/Less_25_ch_4_SleepJoin)
