@@ -67,7 +67,7 @@
 
 ---
 В примерах напоминалках рассмотрены:
-- [Less_25_ch_1_ClassThread](../Less_25_ch_1_ClassThread/src/Less_25_ch_1_ClassThread)
+- [Less_25_ch_1_ClassThread](./Less_25_ch_1_ClassThread/src/Less_25_ch_1_ClassThread)
 - [Less_25_ch_2_InterfaceRunnable](https://github.com/JcoderPaul/JavaExtended-25/tree/master/Less_25_ch_2_InterfaceRunnable/src/Less_25_ch_2_InterfaceRunnable)
 - [Less_25_ch_3_ThreadNamePriority](https://github.com/JcoderPaul/JavaExtended-25/tree/master/Less_25_ch_3_ThreadNamePriority/src/Less_25_ch_3_ThreadNamePriority)
 - [Less_25_ch_4_SleepJoinThread](https://github.com/JcoderPaul/JavaExtended-25/tree/master/Less_25_ch_4_SleepJoinThread/src/Less_25_ch_4_SleepJoin)
